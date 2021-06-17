@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
-* main - Entry point
-* iprints info as shown below
+* main - print the string in the put function
+*
+* Description: using the main function
 * return: always 0 (Success)
 */
 int main(void)

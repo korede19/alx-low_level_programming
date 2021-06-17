@@ -4,7 +4,8 @@
 * main - print the string in the put function
 *
 * Description: using the main function
-* return: always 0 (Success)
+* this program prints "the info below"
+* Return: 0
 */
 int main(void)
 {

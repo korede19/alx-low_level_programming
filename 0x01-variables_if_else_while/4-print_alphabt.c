@@ -4,6 +4,7 @@
 *
 * Description: using the main function
 * this program prints "a-z execpt e and q"
+* Return: 0
 */
 int main(void)
 {

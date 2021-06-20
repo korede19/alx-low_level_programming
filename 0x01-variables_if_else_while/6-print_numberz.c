@@ -8,10 +8,10 @@
 */
 int main(void)
 {
-char ch = '0';
-for (ch = '0'; ch <= '9'; ch++)
+int a;
+for (a = '0'; a <= '9'; ch++)
 {
-putchar(ch);
+putchar(a);
 }
 putchar('\n');
 return (0);

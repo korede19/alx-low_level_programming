@@ -13,7 +13,7 @@ int hours_remainder;
 int mins_remainder;
 while (hours <= 23)
 {
-while (mintues <= 59)
+while (minutes <= 59)
 {
 mins_remainder = minutes % 10;
 hours_remainder = hours % 10;
@@ -23,7 +23,7 @@ _putchar(':');
 _putchar(minutes / 10 + '0');
 _putchar(mins_remainder + '0');
 minutes++;
-_putchar('\n')
+_putchar('\n');
 }
 hours++;
 minutes = 0;

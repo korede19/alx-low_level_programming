@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
 * jack_bauer - func that prints every minute of jack Bauer
-* starting from 00:00 to 23:59, min loop counts mins, while hourloop counts hour
+* starting from 00:00 to 23:59,
+* min loop counts mins, while hourloop counts hour
 * and reset mins
 * Return: 0
 */

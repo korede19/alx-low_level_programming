@@ -28,4 +28,4 @@ _putchar(answer % 10 + '0');
 }
 _putchar('\n');
 }
-}	      
+}

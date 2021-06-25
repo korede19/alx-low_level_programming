@@ -1,19 +1,22 @@
 #include "holberton.h"
 /**
- * print_line - a function that draws a straight line
- * @n: a parameter
- * Return: none;
+ * print_line - function that checks for uppercase character.
+ * @n: is the integer for the paramaters of my function
+ * Return: 0
  */
 void print_line(int n)
 {
-int i;
+	int a = 0;
 
-if (n > 0)
-{
-for (i = 0; i < n; i++)
-{
-_putchar(95);
-}
-}
-_putchar('\n');
+	if (n > 0)
+	{
+		while (a <= n)
+		{
+			_putchar('_');
+			a++;
+		}
+	 _putchar('\n');
+	}
+	else
+	_putchar('\n');
 }

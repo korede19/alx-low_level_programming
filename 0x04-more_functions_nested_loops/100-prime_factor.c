@@ -19,6 +19,6 @@ max = n;
 n = n / i;
 }
 }
-print("%lu\n", max);
+printf("%lu\n", max);
 return (0);
 }

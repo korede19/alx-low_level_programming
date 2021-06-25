@@ -1,15 +1,16 @@
 #include "holberton.h"
 /**
- * print_numbers - a function that prints the numbers
- * Return: none
+ * print_numbers - function that checks for uppercase character.
+ * Return: 0
  */
 void print_numbers(void)
 {
-int i;
+char c = '0';
 
-for (i = 0; i < 10; i++)
+while (c <= '9')
 {
-_putchar(i + '0');
+_putchar(c);
+c++;
 }
 _putchar('\n');
 }

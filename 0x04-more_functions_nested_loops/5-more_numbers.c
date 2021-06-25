@@ -1,22 +1,26 @@
 #include "holberton.h"
 /**
- * more_numbers - a function that prints 10 times the number.
- * Return: none so far
+ * more_numbers - function that checks for uppercase character
+ * Return: 0
  */
 void more_numbers(void)
 {
-int i, j;
 
-for (i = 0; i < 10; i++)
-{
-for (j = 0; j <= 14; j++)
-{
-if (j > 9)
-{
-_putchar(j / 10 + '0');
-}
-_putchar(j % 10 + '0');
-}
-_putchar('\n');
-}
+	int a = 0;
+	int b = 0;
+
+	while (b <= 9)
+	{
+		while (a <= 14)
+		{
+			if (a > 9)
+				_putchar(a / 10 + '0');
+			_putchar(a % 10 + '0');
+			a++;
+
+		}
+	_putchar('\n');
+	b++;
+	a = 0;
+	}
 }

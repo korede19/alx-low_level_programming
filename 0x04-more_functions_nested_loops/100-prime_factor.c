@@ -4,13 +4,11 @@
 *
 * Return: int
 */
-
 int main(void)
 {
 unsigned long n, i, max;
 n = 612852475143;
 max = 1;
-
 for (i = 3; i <= n; i +=2)
 {
 while (n % i == 0)

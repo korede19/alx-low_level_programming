@@ -1,18 +1,19 @@
 #include "holberton.h"
 /**
- * print_most_numbers - a function that prints the numbers exept 2 and 4
- * Return: nothing
+ * print_most_numbers - check the code for Holberton School students.
+ * Return: Always 0.
  */
 void print_most_numbers(void)
 {
-int a;
+	char c = '0';
 
-for (a = 0; a < 10; a++)
-{
-if (a != 2 && a != 4)
-{
-_putchar(a + '0');
-}
-}
+	while (c <= '9')
+	{
+		if (c != '2' && c != '4')
+		{
+			_putchar(c);
+		}
+	c++;
+	}
 _putchar('\n');
 }

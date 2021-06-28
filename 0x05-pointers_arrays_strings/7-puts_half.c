@@ -6,7 +6,7 @@
 */
 void puts_half(char *str)
 {
-int c, a
+int c, a;
 char l;
 
 for (c = 0; str[c] != 0; c++)

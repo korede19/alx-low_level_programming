@@ -10,6 +10,7 @@ int c;
 
 for (c = 0; s[c] != 0; c++)
 {
+_putchar(str[c]);
 }
 return (c);
 }

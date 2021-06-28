@@ -5,12 +5,11 @@
 * Return: 0
 */
 int _strlen(char *s)
-(
-int i;
-
-while (*(s + i))
 {
-i++;
-}
-return (i);
+int counter;
+
+counter = 0;
+while (*(s + counter) != '\0')
+counter++
+return (counter)
 }

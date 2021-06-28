@@ -1,4 +1,4 @@
-#include "holberton"
+#include "holberton.h"
 /**
 * puts2 - func that prints 1 char/2 of a string
 * @str: declaration of str

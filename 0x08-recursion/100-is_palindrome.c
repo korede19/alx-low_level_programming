@@ -1,51 +1,67 @@
 #include "holberton.h"
 
 /**
-* _strlen_recursion - function that print lenght a string
-* @s: string to print recursively
-* Return: void
+* check - compare
+* @i: i
+* @size: size
+* @s: string
+* @add: addition depending if n is odd or even
+* Return: return value
+*/
+
+int check(char *s, int i, int size, int add)
+{
+
+if (i + add == size  && s[i] == s[size])
+{
+return (1);
+}
+
+else if (s[i] == s[size])
+{
+return (check(s, i + 1, size - 1, add));
+}
+
+return (0);
+}
+
+
+/**
+* is_palindrome - Checks of palindrone
+* @r: string
+* Return: 1 if true and 0 if not
+*/
+
+int is_palindrome(char *r)
+{
+
+int i, s, add;
+
+i = 0;
+add = 0;
+
+s = _strlen_recursion(r);
+
+add = (s % 2 != 0) ? 2 : 1;
+
+return (check(r, i, s - 1, add));
+}
+
+/**
+* _strlen_recursion - legth of a string
+* @s: string
+* Return: return legth
 */
 
 int _strlen_recursion(char *s)
 {
-int lenght = 0;
-
-if (*s == '\0')
+if (!*s)
 {
 return (0);
 }
-lenght = 1 + _strlen_recursion((s + 1));
-return (lenght);
-}
 
-/**
-* _palindrome - function that returns 1 if a string
-* is a palindrome and 0 if not.
-* @start: begin to string
-* @size: finish to string
-* @s: string to validate
-* Return: 1 if string is palindrome , 0 otherwise
-*/
-int _palindrome(int start, int size, char *s)
-{
-if (s[start] == s[size]  && start < size)
-return ( _palindrome(start + 1, size - 1, s));
-if (start <= size)
-return (1);
 else
-return (0);
-}
-
-/**
-* is_palindrome - function that returns 1 if a string
-* is a palindrome and 0 if not.
-* @s: string to validate
-* Return: 1 if string is palindrome , 0 otherwise
-*/
-int is_palindrome(char *s)
 {
-int lenght = 0;
-
-lenght = _strlen_recursion(s);
-return (_palindrome(0, lenght - 1, s));
+return (1 + _strlen_recursion(s + 1));
+}
 }

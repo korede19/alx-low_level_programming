@@ -1,64 +1,52 @@
-#include <stdio.h>
 #include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-
 /**
-*main - entry
-*@argv : the string from the terminal
-*@argc : the number of arameters
-*Return: 0
+* main - Program that prints the minimum number of coins to make
+* change for an amount of money.
+* @argc: count
+* @argv: array
+*
+* Return: Always 0
 */
+int main(int argc, char *argv[])
+{
+int values[] = {25, 10, 5, 2, 1}, i, j, result = 0, n;
 
-int main(int argc, char const *argv[])
+if (argc == 2)
 {
-if (argc != 2)
+n = atoi(argv[1]);
+for (i = 0; i < 5; i++)
 {
-printf("Error\n");
-return (-1);
-}
-if (atoi(argv[1]) >= 0)
+if (n < 0)
 {
-int c = 0;
-checker(atoi(argv[1]), c);
-}
-else if (atoi(argv[1]) < 0)
-{
-printf("0\n");
-}
+printf("0");
 return (0);
 }
-
-/**
-* checker - entry function
-*@c : variable
-*@b : variable
-*/
-
-void checker(int c, int b)
+if (n == 0)
 {
-if (c >= 25)
+printf("%d\n", result);
+return (0);
+}
+if (values[i] <= n)
 {
-checker(c - 25, b + 1);
+result += n / values[i];
+n = abs(n - (values[i] * result));
 }
-else if (c >= 10)
+for (j = 0; j < 5; j++)
 {
-checker(c - 10, b + 1);
-}
-else if (c >= 5)
+if (n == values[j])
 {
-checker(c - 5, b + 1);
+result += 1;
+n = 0;
 }
-else if (c >= 2)
+}
+}
+printf("%d\n", result);
+} else
 {
-checker(c - 2, b + 1);
+printf("Error\n");
+return (1);
 }
-else if (c >= 1)
-{tom
-checker(c - 1, b + 1);
-}
-else if (c == 0)
-{
-printf("%d\n", b);
-}
+return (0);
 }

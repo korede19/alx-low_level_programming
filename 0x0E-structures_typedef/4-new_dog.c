@@ -15,7 +15,7 @@ int i = 0, size = 0;
 char *m;
 
 if (str == NULL)
-	return (NULL);
+return (NULL);
 
 for (; str[size] != '\0'; size++)
 ;
@@ -23,15 +23,14 @@ for (; str[size] != '\0'; size++)
 m = malloc(size * sizeof(*str) + 1);
 
 if (m == 0)
-	return (NULL);
+return (NULL);
 else
 {
-	for (; i < size; i++)
-		m[i] = str[i];
+for (; i < size; i++)
+m[i] = str[i];
 }
 return (m);
 }
-
 
 /**
 * *new_dog - create a new dog
@@ -48,23 +47,23 @@ struct dog *mydog;
 mydog = malloc(sizeof(struct dog));
 
 if (mydog == NULL)
-	return (NULL);
+return (NULL);
 
 mydog->name = _strdup(name);
 
 if (mydog->name == NULL)
 {
-	free(mydog);
-	return (NULL);
+free(mydog);
+return (NULL);
 }
 
 mydog->owner = _strdup(owner);
 
 if (mydog->owner == NULL)
 {
-	free(mydog->name);
-	free(mydog);
-	return (NULL);
+free(mydog->name);
+free(mydog);
+return (NULL);
 }
 
 mydog->age = age;

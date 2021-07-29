@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
 * print_list - a function that print all strings from a structure
 * @h : the head of the struct
@@ -6,6 +7,7 @@
 */
 
 size_t print_list(const list_t *h)
+
 {
 size_t i = 0;
 while (h)

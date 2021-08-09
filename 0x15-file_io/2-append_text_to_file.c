@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
-*append_text_to_file - append some text to a file
-*@filename: name of the file
-*@text_content : the context of the file
-*Return: 1
+* append_text_to_file - append some text to a file
+* @filename: name of the file
+* @text_content : the context of the file
+* Return: 1
 */
 
 int append_text_to_file(const char *filename, char *text_content)
